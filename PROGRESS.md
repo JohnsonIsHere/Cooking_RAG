@@ -11,12 +11,14 @@ Definition of done: a public URL that answers Taiwanese cooking questions from t
 plus `evals/eval_set.json` with 10 question/expected-answer pairs committed.
 
 ## Status (update each session)
-- **Last session did:** repo initialized (git, `.gitignore`), venv created, `requirements.txt`
-  pinned, `.env.example` + `pyproject.toml` + README stub written, stack + chunking strategy
-  decided (below), `data/recipes/` and `data/notes/` scaffolded.
+- **Last session did:** card 1 (repo/env setup) and card 2 (stack choice + full trade-off
+  comparison + reading list) both closed out and pushed. Repo transferred to the correct
+  GitHub account (`JohnsonIsHere`) after an initial mixup on card 1.
 - **Next up:** collect ~15–20 Taiwanese recipes (card 3) and 10–15 technique/substitution notes
-  (card 4) — the one true hard blocker before chunk+embed (card 5) can start.
-- **Currently blocked on:** _(none — content authoring is on the user, not a technical blocker)_
+  (card 4) — the one true hard blocker before chunk+embed (card 5) can start. Deliberately
+  paused here: user is taking online RAG courses before returning to build; cards 3/4 need
+  focused writing time from the user's own cooking knowledge, not something to half-start.
+- **Currently blocked on:** _(none — paused by choice, not blocked)_
 - **Latest card report:** [`docs/cards/02-choose-stack.md`](docs/cards/02-choose-stack.md) — card 2 done: full trade-off comparison + reading list. Card 1: [`docs/cards/01-repo-python-env-setup.md`](docs/cards/01-repo-python-env-setup.md), pushed to https://github.com/JohnsonIsHere/Cooking_RAG.
 
 ## Open decisions (resolve and move to CLAUDE.md once settled)
@@ -48,7 +50,8 @@ plus `evals/eval_set.json` with 10 question/expected-answer pairs committed.
 ---
 
 ### Session-end checklist
-- [ ] Updated "Last session did" + "Next up"
-- [ ] Logged any decisions made
-- [ ] Committed + pushed
-- [ ] Notion board reflects reality
+- [x] Updated "Last session did" + "Next up"
+- [x] Logged any decisions made
+- [x] Committed + pushed
+- [ ] Notion board reflects reality — user to mark cards 1 & 2 done in Notion using
+      `docs/cards/01-repo-python-env-setup.md` and `docs/cards/02-choose-stack.md`
