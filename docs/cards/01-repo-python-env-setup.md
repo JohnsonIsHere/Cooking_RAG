@@ -1,7 +1,7 @@
 # Card 01 — Set up repo + Python env
 
 Notion card: Cooking-RAG / M1 / Set up repo + Python env
-Status: Done (pending GitHub push confirmation) — 2026-08-12
+Status: Done — 2026-08-12
 
 ## Problem & objective
 - **Pain points:** No repo, no environment, no locked dependencies, and no documented stack
@@ -37,10 +37,8 @@ Status: Done (pending GitHub push confirmation) — 2026-08-12
 - [x] `requirements.txt` pinned to exact resolved versions.
 - [x] README stub committed (what it is, architecture, stack + rationale, status, what's next).
 - [x] Initial commit made locally.
-- [ ] **GitHub repo created and pushed publicly** — `gh` confirmed authenticated as
-      `jtjohnsontw`; push deliberately held pending explicit user go-ahead, since pushing
-      public is a visible, hard-to-reverse action. Will close out this criterion once
-      confirmed.
+- [x] **GitHub repo created and pushed publicly** — https://github.com/jtjohnsontw/Cooking_RAG,
+      pushed after explicit user confirmation.
 
 ## Trade-offs
 - **FAISS vs Chroma** (vector store): chose FAISS — smaller dependency footprint, and avoids a
@@ -81,8 +79,8 @@ Status: Done (pending GitHub push confirmation) — 2026-08-12
   fast-moving packages.
 - `google-generativeai` deprecation warning caught immediately on first import test — swapped
   to `google-genai` (2.17.0) before it became load-bearing anywhere.
-- GitHub push intentionally not yet executed — not a technical blocker, just held per the
-  working agreement to confirm before public/visible actions.
+- GitHub push was intentionally held until explicit user confirmation, per the working
+  agreement to confirm before public/visible actions — not a technical blocker.
 
 ## Future / improvements
 - Measure actual clean-clone-to-running time and state it in the README once the full pipeline

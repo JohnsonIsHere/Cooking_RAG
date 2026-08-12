@@ -17,7 +17,7 @@ plus `evals/eval_set.json` with 10 question/expected-answer pairs committed.
 - **Next up:** collect ~15–20 Taiwanese recipes (card 3) and 10–15 technique/substitution notes
   (card 4) — the one true hard blocker before chunk+embed (card 5) can start.
 - **Currently blocked on:** _(none — content authoring is on the user, not a technical blocker)_
-- **Latest card report:** [`docs/cards/01-repo-python-env-setup.md`](docs/cards/01-repo-python-env-setup.md) — card 1 done locally; GitHub push pending user confirmation.
+- **Latest card report:** [`docs/cards/01-repo-python-env-setup.md`](docs/cards/01-repo-python-env-setup.md) — card 1 fully done, pushed to https://github.com/jtjohnsontw/Cooking_RAG.
 
 ## Open decisions (resolve and move to CLAUDE.md once settled)
 - [x] Vector store: **FAISS**, two flat in-memory indices (recipes + notes), rebuilt from
