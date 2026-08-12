@@ -37,8 +37,10 @@ Status: Done — 2026-08-12
 - [x] `requirements.txt` pinned to exact resolved versions.
 - [x] README stub committed (what it is, architecture, stack + rationale, status, what's next).
 - [x] Initial commit made locally.
-- [x] **GitHub repo created and pushed publicly** — https://github.com/jtjohnsontw/Cooking_RAG,
-      pushed after explicit user confirmation.
+- [x] **GitHub repo created and pushed publicly** — https://github.com/JohnsonIsHere/Cooking_RAG,
+      pushed after explicit user confirmation. (Initially created under the wrong `gh`-authenticated
+      account, `jtjohnsontw`; caught immediately, `gh auth login` re-run for the correct account
+      `JohnsonIsHere`, and the repo transferred over via the GitHub API — see Blockers below.)
 
 ## Trade-offs
 - **FAISS vs Chroma** (vector store): chose FAISS — smaller dependency footprint, and avoids a
@@ -81,6 +83,12 @@ Status: Done — 2026-08-12
   to `google-genai` (2.17.0) before it became load-bearing anywhere.
 - GitHub push was intentionally held until explicit user confirmation, per the working
   agreement to confirm before public/visible actions — not a technical blocker.
+- The only `gh`-authenticated account on the machine at push time was `jtjohnsontw`, which
+  turned out not to be the user's regular account. Caught right after the first push. Fixed by
+  logging into the correct account (`gh auth login`, one retry needed after a transient
+  `connection reset by peer` on the OAuth token exchange), then transferring the repo via
+  `gh api repos/jtjohnsontw/Cooking_RAG/transfer` (no `gh repo transfer` subcommand exists),
+  and re-pointing the local `origin` remote. Full history preserved, no data lost.
 
 ## Future / improvements
 - Measure actual clean-clone-to-running time and state it in the README once the full pipeline
