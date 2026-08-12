@@ -22,6 +22,8 @@ Flow: `query → embed → retrieve top-k from both layers → assemble prompt �
 - Model choice is deliberately not the differentiator here — both are behind thin wrapper
   modules (`core/embeddings.py`, `core/llm.py`) so they're swappable without touching the rest
   of the pipeline.
+- Full trade-off comparison against alternatives (other embedding models, vector stores, LLM
+  APIs) and a curated reading list: [`docs/cards/02-choose-stack.md`](docs/cards/02-choose-stack.md).
 
 ## Status
 
