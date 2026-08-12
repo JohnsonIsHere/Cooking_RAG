@@ -40,8 +40,12 @@ Two knowledge layers, retrieved together ("retrieve-both"), then answered by an 
 Flow: `query → embed → retrieve top-k from both layers → assemble prompt → LLM answer (+ show sources)`.
 
 - **Scope now:** Taiwanese cuisine only (narrow first, for sharp evaluation).
-- **Vector store:** local (Chroma/FAISS) — decision pending, document once chosen.
-- **LLM + embeddings:** API-based — document exact models once chosen.
+- **Vector store:** FAISS, two flat in-memory indices (one per layer), rebuilt from `data/` on
+  every run — no persistence needed at this corpus size.
+- **Embeddings:** `sentence-transformers` (`all-MiniLM-L6-v2`), local, free, no API key.
+- **LLM:** Gemini Flash (free tier), via the `google-genai` SDK (not the deprecated
+  `google-generativeai`). Claude Haiku is the documented fallback if free-tier limits bite.
+- **Deploy target:** Streamlit Community Cloud (free hosting, public URL).
 
 ## Conventions
 - Python, `venv`, dependencies pinned in `requirements.txt`.
@@ -63,6 +67,14 @@ Flow: `query → embed → retrieve top-k from both layers → assemble prompt �
 - **M3:** MLOps wrapper — Docker, CI/CD (GitHub Actions), monitoring (latency/cost/failures), versioning.
 - **M4:** agentic upgrade — query routing between layers, driven by eval failures.
 - **M5–M6:** write-ups, polish, applications.
+
+## Card completion reports
+Work proceeds one Notion card at a time. When a card is finished, write a completion report to
+`docs/cards/NN-slug.md` using `docs/cards/_template.md` (problem/objective, quantitative
+metrics, qualitative benchmarks, acceptance criteria, trade-offs, non-goals, blockers/rabbit
+holes, future improvements). This is the source the user pastes into the Notion card — be
+thorough and honest, not just a changelog. `PROGRESS.md` only gets a one-line pointer to the
+latest report, not the report content itself.
 
 ## Working style
 - Be honest, not flattering. Flag over-engineering and scope creep.
